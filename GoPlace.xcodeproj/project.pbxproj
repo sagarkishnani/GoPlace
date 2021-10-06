@@ -19,6 +19,11 @@
 		C3B801DD2704C3F000CA53AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B801DB2704C3F000CA53AF /* Main.storyboard */; };
 		C3B801DF2704C3F100CA53AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B801DE2704C3F100CA53AF /* Assets.xcassets */; };
 		C3B801E22704C3F100CA53AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B801E02704C3F100CA53AF /* LaunchScreen.storyboard */; };
+		C3E8ED92270E383D004F6C91 /* RegDriverProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8ED91270E383D004F6C91 /* RegDriverProfileViewController.swift */; };
+		C3E8ED94270E445C004F6C91 /* CambiarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8ED93270E445C004F6C91 /* CambiarViewController.swift */; };
+		C3E8ED96270E461A004F6C91 /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8ED95270E461A004F6C91 /* AddCarViewController.swift */; };
+		C3E8ED98270E480E004F6C91 /* RegisterDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8ED97270E480E004F6C91 /* RegisterDriverViewController.swift */; };
+		C3E8ED9A270E4ABE004F6C91 /* AddDocsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E8ED99270E4ABE004F6C91 /* AddDocsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		C3B801DE2704C3F100CA53AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3B801E12704C3F100CA53AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3B801E32704C3F100CA53AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3E8ED91270E383D004F6C91 /* RegDriverProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegDriverProfileViewController.swift; sourceTree = "<group>"; };
+		C3E8ED93270E445C004F6C91 /* CambiarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambiarViewController.swift; sourceTree = "<group>"; };
+		C3E8ED95270E461A004F6C91 /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
+		C3E8ED97270E480E004F6C91 /* RegisterDriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDriverViewController.swift; sourceTree = "<group>"; };
+		C3E8ED99270E4ABE004F6C91 /* AddDocsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,8 @@
 				C3B801D72704C3F000CA53AF /* SceneDelegate.swift */,
 				C3B801D92704C3F000CA53AF /* ViewController.swift */,
 				C3B801DB2704C3F000CA53AF /* Main.storyboard */,
+				C3E8ED97270E480E004F6C91 /* RegisterDriverViewController.swift */,
+				C3E8ED93270E445C004F6C91 /* CambiarViewController.swift */,
 				C3B801DE2704C3F100CA53AF /* Assets.xcassets */,
 				C3B801E02704C3F100CA53AF /* LaunchScreen.storyboard */,
 				C3B801E32704C3F100CA53AF /* Info.plist */,
@@ -81,6 +93,9 @@
 				C3338E19270D416900B1AB4B /* RegisterViewController.swift */,
 				C3338E1B270D44DE00B1AB4B /* RegUserProfileViewController.swift */,
 				C3338E1D270D469B00B1AB4B /* RegDriverPicViewController.swift */,
+				C3E8ED91270E383D004F6C91 /* RegDriverProfileViewController.swift */,
+				C3E8ED95270E461A004F6C91 /* AddCarViewController.swift */,
+				C3E8ED99270E4ABE004F6C91 /* AddDocsViewController.swift */,
 			);
 			path = GoPlace;
 			sourceTree = "<group>";
@@ -156,12 +171,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E8ED94270E445C004F6C91 /* CambiarViewController.swift in Sources */,
 				C3338E1E270D469B00B1AB4B /* RegDriverPicViewController.swift in Sources */,
 				C3338E1C270D44DE00B1AB4B /* RegUserProfileViewController.swift in Sources */,
 				C30045D827082DF400E31DC6 /* LoginViewController.swift in Sources */,
 				C3B801DA2704C3F000CA53AF /* ViewController.swift in Sources */,
+				C3E8ED96270E461A004F6C91 /* AddCarViewController.swift in Sources */,
+				C3E8ED92270E383D004F6C91 /* RegDriverProfileViewController.swift in Sources */,
 				C3B801D62704C3F000CA53AF /* AppDelegate.swift in Sources */,
+				C3E8ED9A270E4ABE004F6C91 /* AddDocsViewController.swift in Sources */,
 				C3338E1A270D416900B1AB4B /* RegisterViewController.swift in Sources */,
+				C3E8ED98270E480E004F6C91 /* RegisterDriverViewController.swift in Sources */,
 				C3B801D82704C3F000CA53AF /* SceneDelegate.swift in Sources */,
 				C3338E18270CD16000B1AB4B /* ConfirmationViewController.swift in Sources */,
 			);

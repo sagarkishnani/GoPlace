@@ -1,20 +1,20 @@
 //
-//  RegUserProfileViewController.swift
+//  AddCarViewController.swift
 //  GoPlace
 //
-//  Created by Aakash Kishnani on 5/10/21.
+//  Created by Aakash Kishnani on 6/10/21.
 //
 
 import UIKit
 
-class RegUserProfileViewController: UIViewController {
+class AddCarViewController: UIViewController {
     @IBOutlet weak var cnsBottomScroll: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerKeyboardNotification()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -31,23 +31,24 @@ class RegUserProfileViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
     }
+
 }
 
-extension RegUserProfileViewController {
-    @IBAction private func TapToClose(_ sender: Any) {
+extension AddCarViewController {
+    @IBAction func TapToClose(_ sender: Any) {
         self.view.endEditing(true)
     }
 }
 
-extension RegUserProfileViewController {
-    func registerKeyboardNotification() {
+extension AddCarViewController {
+    private func registerKeyboardNotification() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
-    func unregisterKeyboardNotification() {
+    private func unregisterKeyboardNotification() {
         
         NotificationCenter.default.removeObserver(self)
     }

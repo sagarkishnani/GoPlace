@@ -185,6 +185,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4YQ-c0-he6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="qqw-fj-XYc" firstAttribute="top" secondItem="Cpj-JL-T8c" secondAttribute="bottom" constant="51" id="2X6-rX-PvP"/>
                             <constraint firstItem="Cpj-JL-T8c" firstAttribute="trailing" secondItem="4YQ-c0-he6" secondAttribute="trailing" id="5hK-Q4-aB7"/>
@@ -195,17 +196,25 @@
                             <constraint firstItem="qqw-fj-XYc" firstAttribute="leading" secondItem="4YQ-c0-he6" secondAttribute="leading" id="h78-zS-ik4"/>
                             <constraint firstItem="Cpj-JL-T8c" firstAttribute="top" secondItem="4YQ-c0-he6" secondAttribute="top" constant="41" id="lP4-lj-6t8"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cks-ut-Ou5" appends="YES" id="Yzn-3n-FjX"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="FId-bY-BN6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jiQ-Xw-XpN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cks-ut-Ou5">
+                    <connections>
+                        <action selector="TapToClose:" destination="uhA-Cm-A03" id="9hf-Zd-ImV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1569.5652173913045" y="73.660714285714278"/>
         </scene>
         <!--Cambiar View Controller-->
         <scene sceneID="Z39-A9-9gi">
             <objects>
-                <viewController id="VMe-7c-RGL" customClass="CambiarViewController" sceneMemberID="viewController">
+                <viewController id="VMe-7c-RGL" customClass="CambiarViewController" customModule="GoPlace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Udl-qA-dww">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,6 +278,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NLJ-B6-JeB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="hl3-KN-GHa" firstAttribute="top" secondItem="gLJ-gH-XC4" secondAttribute="bottom" constant="88" id="O2t-QJ-TdL"/>
                             <constraint firstItem="OeJ-lw-hrg" firstAttribute="centerX" secondItem="Udl-qA-dww" secondAttribute="centerX" id="SfT-q1-04J"/>
@@ -278,10 +288,18 @@
                             <constraint firstItem="hl3-KN-GHa" firstAttribute="centerX" secondItem="Udl-qA-dww" secondAttribute="centerX" id="pny-co-S2n"/>
                             <constraint firstItem="gLJ-gH-XC4" firstAttribute="leading" secondItem="NLJ-B6-JeB" secondAttribute="leading" id="qvs-wj-Hnj"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="UcE-C3-cfU" appends="YES" id="4Tg-lZ-ZAy"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="EgL-5U-1Z0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hdx-ap-ddm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UcE-C3-cfU">
+                    <connections>
+                        <action selector="TapToClose:" destination="VMe-7c-RGL" id="X5p-eN-PBK"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2442" y="73"/>
         </scene>
@@ -372,6 +390,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="zum-sy-wsh" firstAttribute="top" secondItem="vCv-oE-mTe" secondAttribute="bottom" constant="47" id="4Je-gb-pYR"/>
                                     <constraint firstItem="zum-sy-wsh" firstAttribute="centerX" secondItem="a6k-os-bbw" secondAttribute="centerX" id="5Uw-vP-Ydw"/>
@@ -383,6 +402,9 @@
                                     <constraint firstItem="zum-sy-wsh" firstAttribute="leading" secondItem="a6k-os-bbw" secondAttribute="leading" id="oKA-yq-LsI"/>
                                     <constraint firstAttribute="trailing" secondItem="zum-sy-wsh" secondAttribute="trailing" id="pkF-Jq-ycH"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="HQG-L9-4J3" appends="YES" id="hDJ-AW-eDu"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CDG-Rh-KHI"/>
@@ -401,6 +423,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OJA-5r-A3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HQG-L9-4J3">
+                    <connections>
+                        <action selector="TapToClose:" destination="Ftz-yu-EpO" id="sOw-uB-p7I"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1566.6666666666667" y="799.55357142857144"/>
         </scene>
@@ -645,10 +672,10 @@
             </objects>
             <point key="canvasLocation" x="3335" y="75"/>
         </scene>
-        <!--View Controller-->
+        <!--Reg Driver Profile View Controller-->
         <scene sceneID="vEH-92-TWE">
             <objects>
-                <viewController id="2EH-aA-WoL" sceneMemberID="viewController">
+                <viewController id="2EH-aA-WoL" customClass="RegDriverProfileViewController" customModule="GoPlace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rc7-kq-Txh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -756,6 +783,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="2NF-nW-nHA" firstAttribute="centerX" secondItem="TLG-mI-YfE" secondAttribute="centerX" id="1I8-Wg-CKx"/>
                                     <constraint firstItem="Wvs-X4-cBO" firstAttribute="centerX" secondItem="yjA-yy-dyy" secondAttribute="centerX" id="78w-lZ-nqD"/>
@@ -768,6 +796,9 @@
                                     <constraint firstItem="TLG-mI-YfE" firstAttribute="centerX" secondItem="yjA-yy-dyy" secondAttribute="centerX" id="YRT-Af-SPG"/>
                                     <constraint firstItem="TLG-mI-YfE" firstAttribute="top" secondItem="2NF-nW-nHA" secondAttribute="bottom" constant="69" id="yil-6J-ZuL"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9OM-YX-Fsx" appends="YES" id="Cix-3s-9If"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eeS-ke-W0g"/>
@@ -781,8 +812,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="Fev-vW-3pl"/>
                     <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="cnsBottomScroll" destination="7xL-s7-BlM" id="cze-LR-nVm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcu-P7-xqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9OM-YX-Fsx">
+                    <connections>
+                        <action selector="TapToCloseKeyboard:" destination="2EH-aA-WoL" id="e7J-zm-iMj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1566.6666666666667" y="1500.6696428571429"/>
         </scene>
@@ -861,10 +900,10 @@
             </objects>
             <point key="canvasLocation" x="2437.68115942029" y="1500.6696428571429"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Docs View Controller-->
         <scene sceneID="xAX-W5-UIb">
             <objects>
-                <viewController id="j0h-S3-2Iq" sceneMemberID="viewController">
+                <viewController id="j0h-S3-2Iq" customClass="AddDocsViewController" customModule="GoPlace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4L2-pk-g8l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -875,34 +914,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QKL-QS-WxC">
                                         <rect key="frame" x="0.0" y="247" width="414" height="270"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="qf6-od-rIc">
-                                                <rect key="frame" x="20" y="20" width="206" height="228"/>
-                                                <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tarjeta de propiedad" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Dk-8h-Bgm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="206" height="25.5"/>
-                                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Licencia de conducir" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rqt-jy-DaH">
-                                                        <rect key="frame" x="0.0" y="67.5" width="205" height="25.5"/>
-                                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="DNI" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VPC-zn-SKK">
-                                                        <rect key="frame" x="0.0" y="135" width="36" height="25.5"/>
-                                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Revisión técnica" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NWb-uF-wZN">
-                                                        <rect key="frame" x="0.0" y="202.5" width="163" height="25.5"/>
-                                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="Rqt-jy-DaH" firstAttribute="leading" secondItem="qf6-od-rIc" secondAttribute="leading" id="JBr-mT-tPh"/>
-                                                </constraints>
-                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uzi-DU-6HY">
                                                 <rect key="frame" x="307" y="20" width="63" height="228"/>
                                                 <subviews>
@@ -936,15 +947,44 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="VEw-a1-5it">
+                                                <rect key="frame" x="23" y="20" width="205.5" height="228"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarjeta de propiedad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6G-gU-pvx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="205.5" height="24"/>
+                                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Licencia de conducir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gts-pK-tJz">
+                                                        <rect key="frame" x="0.0" y="68" width="205" height="24"/>
+                                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DNI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f1-ik-8Q0">
+                                                        <rect key="frame" x="0.0" y="136" width="35.5" height="24"/>
+                                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Revisión técnica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="928-pD-spj">
+                                                        <rect key="frame" x="0.0" y="204" width="163" height="24"/>
+                                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="Uzi-DU-6HY" firstAttribute="leading" secondItem="qf6-od-rIc" secondAttribute="trailing" constant="81" id="HHK-hC-blG"/>
+                                            <constraint firstItem="VEw-a1-5it" firstAttribute="leading" secondItem="QKL-QS-WxC" secondAttribute="leading" constant="23" id="1R0-5F-hmd"/>
+                                            <constraint firstItem="Uzi-DU-6HY" firstAttribute="top" secondItem="VEw-a1-5it" secondAttribute="top" id="A2Z-xX-5a2"/>
+                                            <constraint firstItem="VEw-a1-5it" firstAttribute="top" secondItem="QKL-QS-WxC" secondAttribute="top" constant="20" symbolic="YES" id="CLq-SO-R46"/>
                                             <constraint firstAttribute="trailing" secondItem="Uzi-DU-6HY" secondAttribute="trailing" constant="44" id="Xyr-wl-Twh"/>
-                                            <constraint firstItem="qf6-od-rIc" firstAttribute="leading" secondItem="QKL-QS-WxC" secondAttribute="leading" constant="20" symbolic="YES" id="ZOK-CM-jt4"/>
-                                            <constraint firstItem="qf6-od-rIc" firstAttribute="top" secondItem="QKL-QS-WxC" secondAttribute="top" constant="20" id="e67-Ix-bip"/>
+                                            <constraint firstAttribute="bottom" secondItem="VEw-a1-5it" secondAttribute="bottom" constant="22" id="Ynn-PA-wHe"/>
                                             <constraint firstAttribute="height" constant="270" id="ig7-li-KjX"/>
-                                            <constraint firstItem="qf6-od-rIc" firstAttribute="top" secondItem="Uzi-DU-6HY" secondAttribute="top" id="nvH-QV-umi"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMm-Ma-TF0">
@@ -967,13 +1007,14 @@
                                             <segue destination="jrl-1U-z9f" kind="show" id="GVn-6L-lN2"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Documentos Personales" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo2-mX-EId">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Documentos Personales" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo2-mX-EId">
                                         <rect key="frame" x="55" y="121" width="304" height="59"/>
                                         <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="25"/>
                                         <color key="textColor" red="0.050980392159999999" green="0.043137254899999998" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="mo2-mX-EId" firstAttribute="centerX" secondItem="7qV-S0-O4q" secondAttribute="centerX" id="24K-c5-Ocp"/>
                                     <constraint firstItem="QKL-QS-WxC" firstAttribute="centerX" secondItem="7qV-S0-O4q" secondAttribute="centerX" id="JaW-L7-ksC"/>
@@ -986,6 +1027,9 @@
                                     <constraint firstItem="mo2-mX-EId" firstAttribute="top" secondItem="7qV-S0-O4q" secondAttribute="top" constant="121" id="vEe-Nz-TcI"/>
                                     <constraint firstItem="mo2-mX-EId" firstAttribute="leading" secondItem="7qV-S0-O4q" secondAttribute="leading" constant="55" id="yPt-jm-hJ6"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="SjK-wv-h0B" appends="YES" id="4bF-FE-ZKl"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="34R-51-hZX"/>
@@ -1001,13 +1045,18 @@
                     <size key="freeformSize" width="414" height="896"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VkF-1h-jSf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SjK-wv-h0B">
+                    <connections>
+                        <action selector="TapToClose:" destination="j0h-S3-2Iq" id="zEh-Fn-v5O"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3305.7971014492755" y="1500.6696428571429"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Car View Controller-->
         <scene sceneID="Eve-6f-M39">
             <objects>
-                <viewController id="jrl-1U-z9f" sceneMemberID="viewController">
+                <viewController id="jrl-1U-z9f" customClass="AddCarViewController" customModule="GoPlace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l3g-rF-j4G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1065,6 +1114,7 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mHm-bk-OzJ" secondAttribute="trailing" constant="20" symbolic="YES" id="24y-gc-v1W"/>
                                             <constraint firstItem="Ll6-Jk-Pmz" firstAttribute="leading" secondItem="W6i-XJ-v83" secondAttribute="leading" id="BBJ-5A-04F"/>
                                             <constraint firstItem="Ll6-Jk-Pmz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9q7-tv-YB8" secondAttribute="leading" id="Eae-bE-DEV"/>
                                             <constraint firstAttribute="bottom" secondItem="mHm-bk-OzJ" secondAttribute="bottom" constant="20" id="G5E-EQ-B28"/>
@@ -1074,6 +1124,7 @@
                                             <constraint firstItem="W6i-XJ-v83" firstAttribute="top" secondItem="Ll6-Jk-Pmz" secondAttribute="bottom" constant="35" id="WeX-TV-Q27"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZjY-wG-XS7" secondAttribute="trailing" constant="20" symbolic="YES" id="Wiq-p7-LO2"/>
                                             <constraint firstAttribute="trailing" secondItem="Ll6-Jk-Pmz" secondAttribute="trailing" constant="274" id="Xuz-cv-yMK"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yxJ-Ak-R1B" secondAttribute="trailing" constant="20" symbolic="YES" id="bqR-1Y-5g8"/>
                                             <constraint firstItem="mHm-bk-OzJ" firstAttribute="top" secondItem="yxJ-Ak-R1B" secondAttribute="bottom" constant="31" id="gue-v4-E4W"/>
                                             <constraint firstAttribute="bottom" secondItem="W6i-XJ-v83" secondAttribute="bottom" constant="150" id="hnr-Kx-Dah"/>
                                             <constraint firstItem="mHm-bk-OzJ" firstAttribute="leading" secondItem="yxJ-Ak-R1B" secondAttribute="leading" id="hqt-i6-7vV"/>
@@ -1081,6 +1132,7 @@
                                             <constraint firstItem="9q7-tv-YB8" firstAttribute="leading" secondItem="ZjY-wG-XS7" secondAttribute="leading" id="kAL-oN-R9b"/>
                                             <constraint firstItem="9q7-tv-YB8" firstAttribute="top" secondItem="ZjY-wG-XS7" secondAttribute="bottom" constant="36.5" id="lZ0-Ee-YYL"/>
                                             <constraint firstItem="ZjY-wG-XS7" firstAttribute="top" secondItem="VVE-J0-ksW" secondAttribute="top" constant="20" symbolic="YES" id="lbm-aP-RPD"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W6i-XJ-v83" secondAttribute="trailing" constant="20" symbolic="YES" id="lwF-uM-SO4"/>
                                             <constraint firstAttribute="height" constant="400" id="mng-do-sbP"/>
                                             <constraint firstItem="yxJ-Ak-R1B" firstAttribute="top" secondItem="W6i-XJ-v83" secondAttribute="bottom" constant="31" id="rOZ-B2-1GS"/>
                                         </constraints>
@@ -1105,13 +1157,14 @@
                                             <segue destination="Ojh-J1-nwi" kind="show" id="zpE-gV-fiB"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Añadir vehículo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTp-vz-y7A">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Añadir vehículo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTp-vz-y7A">
                                         <rect key="frame" x="109" y="116" width="196" height="30"/>
                                         <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="25"/>
                                         <color key="textColor" red="0.050980392159999999" green="0.043137254899999998" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="VVE-J0-ksW" firstAttribute="trailing" secondItem="L2v-V4-V6o" secondAttribute="trailing" id="2Aq-Sx-2og"/>
                                     <constraint firstItem="VVE-J0-ksW" firstAttribute="leading" secondItem="L2v-V4-V6o" secondAttribute="leading" id="Hmb-Z2-Q5F"/>
@@ -1123,6 +1176,9 @@
                                     <constraint firstItem="VVE-J0-ksW" firstAttribute="centerX" secondItem="YRE-41-Wwr" secondAttribute="centerX" id="eMq-N3-TRr"/>
                                     <constraint firstAttribute="bottom" secondItem="VVE-J0-ksW" secondAttribute="bottom" constant="278" id="wBB-Jp-J3S"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qYq-j9-6gA" appends="YES" id="SJ5-Ld-fUt"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xHV-fo-vbn"/>
@@ -1136,15 +1192,23 @@
                     </view>
                     <navigationItem key="navigationItem" id="5I7-S1-J48"/>
                     <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="cnsBottomScroll" destination="3Ol-fb-0bo" id="LLB-ps-7hu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPg-Kc-t2Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qYq-j9-6gA">
+                    <connections>
+                        <action selector="TapToClose:" destination="jrl-1U-z9f" id="eMJ-b0-JqC"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4142.0289855072469" y="1500.6696428571429"/>
         </scene>
-        <!--View Controller-->
+        <!--Register Driver View Controller-->
         <scene sceneID="Nyp-1k-PED">
             <objects>
-                <viewController id="Ojh-J1-nwi" sceneMemberID="viewController">
+                <viewController id="Ojh-J1-nwi" customClass="RegisterDriverViewController" customModule="GoPlace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MB5-9D-AtO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1165,6 +1229,7 @@
                                             <color key="titleColor" red="0.050980392159999999" green="0.043137254899999998" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="clickBtnRegister:" destination="Ojh-J1-nwi" eventType="touchUpInside" id="251-wS-75o"/>
                                             <action selector="clickBtnRegister:" destination="CoO-a2-1ir" eventType="touchUpInside" id="V1B-ZB-Gxw"/>
                                         </connections>
                                     </button>
