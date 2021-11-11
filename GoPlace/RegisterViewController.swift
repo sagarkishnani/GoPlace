@@ -8,10 +8,11 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    
     @IBAction func clickBtnRegister(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
     }
-    
+
     
     
 }

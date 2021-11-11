@@ -6,8 +6,17 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegUserProfileViewController: UIViewController {
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
+    
     @IBOutlet weak var cnsBottomScroll: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -31,7 +40,28 @@ class RegUserProfileViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
     }
+    
+    @IBAction func registerButtonAction(_ sender: Any) {
+        
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            
+            Auth.auth().createUser(withEmail: email, password: password) {
+                (result, error) in
+                
+                if let result = result, error == nil {
+                    self.navigationController?.pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
+                } else {
+                    let alertController = UIAlertController(title: "Error", message: "Se ha producido un error registrando el usuario", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+    }
 }
+
+
 
 extension RegUserProfileViewController {
     @IBAction private func TapToClose(_ sender: Any) {

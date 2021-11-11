@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VAG-Of-wKJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VAG-Of-wKJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -161,6 +162,9 @@
                                                 <real key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="logInButtonAction:" destination="uhA-Cm-A03" eventType="touchUpInside" id="3vQ-25-bLO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEe-o6-pzt">
                                         <rect key="frame" x="101.5" y="122" width="211" height="36"/>
@@ -169,7 +173,7 @@
                                             <color key="titleColor" red="0.050980392159999999" green="0.043137254899999998" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="VMe-7c-RGL" kind="show" id="O51-j3-Ej1"/>
+                                            <action selector="forgetPasswordButtonAction:" destination="uhA-Cm-A03" eventType="touchUpInside" id="pus-8f-aaq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -201,6 +205,12 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="FId-bY-BN6"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="nOT-TN-Vpu" id="QcY-CB-IuA"/>
+                        <outlet property="forgetPasswordButton" destination="LEe-o6-pzt" id="EeB-lj-gK0"/>
+                        <outlet property="logInButton" destination="ck7-vK-wUX" id="Wb1-Ur-7yZ"/>
+                        <outlet property="passwordTextField" destination="Lir-U3-tex" id="bT9-Jg-Dhf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jiQ-Xw-XpN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="cks-ut-Ou5">
@@ -210,98 +220,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1569.5652173913045" y="73.660714285714278"/>
-        </scene>
-        <!--Cambiar View Controller-->
-        <scene sceneID="Z39-A9-9gi">
-            <objects>
-                <viewController id="VMe-7c-RGL" customClass="CambiarViewController" customModule="GoPlace" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Udl-qA-dww">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cambiar contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeJ-lw-hrg">
-                                <rect key="frame" x="54.5" y="93" width="305" height="36"/>
-                                <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="30"/>
-                                <color key="textColor" red="0.050980392159999999" green="0.043137254899999998" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-gH-XC4" userLabel="CambioView">
-                                <rect key="frame" x="0.0" y="175" width="414" height="155"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nueva contraseña" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2YA-eV-WtH">
-                                        <rect key="frame" x="37" y="19" width="294" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="tWs-9K-9pR"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirmar Contraseña" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phG-Uq-jeO">
-                                        <rect key="frame" x="37" y="100" width="294" height="24"/>
-                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="2YA-eV-WtH" firstAttribute="trailing" secondItem="phG-Uq-jeO" secondAttribute="trailing" id="7je-Pc-y9g"/>
-                                    <constraint firstItem="2YA-eV-WtH" firstAttribute="top" secondItem="gLJ-gH-XC4" secondAttribute="top" constant="19" id="Vr1-cc-AE8"/>
-                                    <constraint firstItem="2YA-eV-WtH" firstAttribute="leading" secondItem="gLJ-gH-XC4" secondAttribute="leading" constant="37" id="b1z-pj-XSW"/>
-                                    <constraint firstAttribute="trailing" secondItem="2YA-eV-WtH" secondAttribute="trailing" constant="83" id="hPq-ws-1oI"/>
-                                    <constraint firstAttribute="height" constant="155" id="kNC-iD-Adu"/>
-                                    <constraint firstItem="2YA-eV-WtH" firstAttribute="leading" secondItem="phG-Uq-jeO" secondAttribute="leading" id="odS-gY-ajp"/>
-                                    <constraint firstItem="phG-Uq-jeO" firstAttribute="top" secondItem="2YA-eV-WtH" secondAttribute="bottom" constant="47" id="uhe-9Z-TAq"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hl3-KN-GHa">
-                                <rect key="frame" x="44.5" y="418" width="325" height="60"/>
-                                <color key="backgroundColor" red="0.050980392159999999" green="0.043137254899999998" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="187-hJ-V7x"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="325" id="JUp-CL-Bfx"/>
-                                    <constraint firstAttribute="height" constant="60" id="OEh-kd-Dcl"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="325" id="asP-fL-CeY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
-                                <state key="normal" title="CAMBIAR">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="MBh-iv-Kww" kind="show" id="r3v-B1-bjW"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="NLJ-B6-JeB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="hl3-KN-GHa" firstAttribute="top" secondItem="gLJ-gH-XC4" secondAttribute="bottom" constant="88" id="O2t-QJ-TdL"/>
-                            <constraint firstItem="OeJ-lw-hrg" firstAttribute="centerX" secondItem="Udl-qA-dww" secondAttribute="centerX" id="SfT-q1-04J"/>
-                            <constraint firstItem="gLJ-gH-XC4" firstAttribute="top" secondItem="OeJ-lw-hrg" secondAttribute="bottom" constant="46" id="W2G-pD-lvV"/>
-                            <constraint firstItem="gLJ-gH-XC4" firstAttribute="trailing" secondItem="NLJ-B6-JeB" secondAttribute="trailing" id="XVC-0g-aTv"/>
-                            <constraint firstItem="OeJ-lw-hrg" firstAttribute="top" secondItem="NLJ-B6-JeB" secondAttribute="top" constant="49" id="oNS-OD-WBe"/>
-                            <constraint firstItem="hl3-KN-GHa" firstAttribute="centerX" secondItem="Udl-qA-dww" secondAttribute="centerX" id="pny-co-S2n"/>
-                            <constraint firstItem="gLJ-gH-XC4" firstAttribute="leading" secondItem="NLJ-B6-JeB" secondAttribute="leading" id="qvs-wj-Hnj"/>
-                        </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="UcE-C3-cfU" appends="YES" id="4Tg-lZ-ZAy"/>
-                        </connections>
-                    </view>
-                    <navigationItem key="navigationItem" id="EgL-5U-1Z0"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hdx-ap-ddm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="UcE-C3-cfU">
-                    <connections>
-                        <action selector="TapToClose:" destination="VMe-7c-RGL" id="X5p-eN-PBK"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="2442" y="73"/>
         </scene>
         <!--Reg User Profile View Controller-->
         <scene sceneID="S4O-nI-Uwi">
@@ -386,7 +304,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="CoO-a2-1ir" kind="show" id="Ep2-cU-WMA"/>
+                                            <action selector="registerButtonAction:" destination="Ftz-yu-EpO" eventType="touchUpInside" id="wF5-5u-T5d"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -420,6 +338,10 @@
                     <navigationItem key="navigationItem" id="snJ-jq-aWN"/>
                     <connections>
                         <outlet property="cnsBottomScroll" destination="xZa-sV-kNa" id="c5X-YP-ILe"/>
+                        <outlet property="confirmPasswordTextField" destination="dig-1v-RA0" id="9kY-my-VNl"/>
+                        <outlet property="emailTextField" destination="6os-C0-1Ve" id="c1z-lg-h7B"/>
+                        <outlet property="passwordTextField" destination="uDP-A6-Fbt" id="ZMR-ia-nBg"/>
+                        <outlet property="registerButton" destination="In3-uN-aI2" id="wJy-nZ-1rQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OJA-5r-A3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -604,74 +526,6 @@
             </objects>
             <point key="canvasLocation" x="2439.130434782609" y="799.55357142857144"/>
         </scene>
-        <!--Confirmation View Controller-->
-        <scene sceneID="plJ-fg-Gqq">
-            <objects>
-                <viewController id="MBh-iv-Kww" customClass="ConfirmationViewController" customModule="GoPlace" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="q3T-0u-ewX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29E-Qa-WDX">
-                                <rect key="frame" x="44.5" y="350" width="325" height="196"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muchas gracias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bz0-yX-F3j">
-                                        <rect key="frame" x="18" y="16" width="198" height="29.5"/>
-                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="25"/>
-                                        <color key="textColor" red="0.050980392159999999" green="0.043137254899999998" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hn-1B-7s8">
-                                        <rect key="frame" x="277" y="151.5" width="30" height="36.5"/>
-                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
-                                        <state key="normal" title="OK">
-                                            <color key="titleColor" red="0.050980392159999999" green="0.043137254899999998" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="clickBtnConfirm:" destination="MBh-iv-Kww" eventType="touchUpInside" id="wMZ-RH-RiP"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Su contraseña ha sido modificada con éxito." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhk-2r-bg9">
-                                        <rect key="frame" x="32" y="63.5" width="261" height="69"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="69" id="gpI-98-jEc"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="20"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="bhk-2r-bg9" firstAttribute="centerX" secondItem="29E-Qa-WDX" secondAttribute="centerX" id="4J2-wf-jdZ"/>
-                                    <constraint firstItem="bhk-2r-bg9" firstAttribute="leading" secondItem="29E-Qa-WDX" secondAttribute="leading" constant="32" id="BaG-Nm-fLi"/>
-                                    <constraint firstAttribute="trailing" secondItem="6hn-1B-7s8" secondAttribute="trailing" constant="18" id="COz-pw-EGA"/>
-                                    <constraint firstItem="6hn-1B-7s8" firstAttribute="bottom" secondItem="29E-Qa-WDX" secondAttribute="bottomMargin" id="CwV-Kh-Lze"/>
-                                    <constraint firstItem="Bz0-yX-F3j" firstAttribute="leading" secondItem="29E-Qa-WDX" secondAttribute="leading" constant="18" id="EgU-3t-KTL"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Bz0-yX-F3j" secondAttribute="trailing" constant="20" symbolic="YES" id="FzB-7w-AwT"/>
-                                    <constraint firstAttribute="width" constant="325" id="JXX-2L-sKl"/>
-                                    <constraint firstItem="bhk-2r-bg9" firstAttribute="top" secondItem="Bz0-yX-F3j" secondAttribute="bottom" constant="18" id="SH3-iK-ixk"/>
-                                    <constraint firstItem="Bz0-yX-F3j" firstAttribute="top" secondItem="29E-Qa-WDX" secondAttribute="top" constant="16" id="Uwd-uR-J9U"/>
-                                    <constraint firstItem="bhk-2r-bg9" firstAttribute="centerY" secondItem="29E-Qa-WDX" secondAttribute="centerY" id="Ver-cl-Ve8"/>
-                                    <constraint firstAttribute="height" constant="196" id="bnz-V2-WCS"/>
-                                    <constraint firstItem="6hn-1B-7s8" firstAttribute="top" secondItem="bhk-2r-bg9" secondAttribute="bottom" constant="19" id="iM6-NK-iN4"/>
-                                    <constraint firstItem="6hn-1B-7s8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="29E-Qa-WDX" secondAttribute="leading" constant="20" symbolic="YES" id="o6B-jR-Ki0"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="qjd-3d-3qd"/>
-                        <color key="backgroundColor" red="0.050980392159999999" green="0.043137254899999998" blue="0.094117647060000004" alpha="0.84773596939999996" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="29E-Qa-WDX" firstAttribute="centerY" secondItem="q3T-0u-ewX" secondAttribute="centerY" id="4ao-Zu-jHR"/>
-                            <constraint firstItem="29E-Qa-WDX" firstAttribute="centerX" secondItem="q3T-0u-ewX" secondAttribute="centerX" id="gD4-rF-CQv"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="aGI-7r-2xv"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="014-nU-hMw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3335" y="75"/>
-        </scene>
         <!--Reg Driver Profile View Controller-->
         <scene sceneID="vEH-92-TWE">
             <objects>
@@ -823,7 +677,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1566.6666666666667" y="1500.6696428571429"/>
+            <point key="canvasLocation" x="1565" y="1529"/>
         </scene>
         <!--Reg Driver Pic View Controller-->
         <scene sceneID="u98-yw-HP8">
